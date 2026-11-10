@@ -1,0 +1,26 @@
+♻️ QAYTA Admin
+Chiqish
+BOSHQARUV
+
+Buyurtmalar
+Telegram botdan kelgan buyurtmalar
+
+Jami buyurtma{{ total }}
+Yangi{{ new_count }}
+Jarayonda{{ progress_count }}
+Yakunlangan{{ done_count }}
+{% with messages = get_flashed_messages(with_categories=true) %} {% for category, message in messages %}
+{{ message }}
+{% endfor %} {% endwith %}
+{{ search }}
+ 
+Barcha holatlar
+ Qidirish Tozalash
+{% for o in orders %} {% else %} {% endfor %}
+№	Foydalanuvchi	Buyum	Og‘irligi	Manzil	Telefon	Holati	Yangilash
+#{{ o.id }}	{{ ('@' + o.username) if o.username else ('ID: ' + (o.user_id|string)) }}	{{ o.item_type }}	{{ o.weight }}	{{ o.address }}	{{ o.phone }}	{{ o.status }}	
+
+{{ s }}
+ Saqlash
+Buyurtmalar topilmadi.
+Eng so‘nggi 300 ta buyurtma ko‘rsatiladi. Ma’lumotlar bot ishlatayotgan qayta.db bazasidan olinadi.
